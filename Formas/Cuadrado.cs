@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Formas
 {
-    public class Cuadrado 
+    public class Cuadrado : Figura
     {
+        private string _nombre = "Cuadrado";
         private float lado;
         public float Lado
         {
@@ -17,18 +18,13 @@ namespace Formas
         {
             this.lado = lado;
         }
-        public virtual float CalcularArea()
+        public override double CalcularArea()
         {
             return lado * lado;
         }
-        public virtual float CalcularPerimetro()
+        public override double CalcularPerimetro()
         {
             return 4 * lado;
-        }
-
-        public void MostrarInformacion()
-        {
-            Console.WriteLine($"Cuadrado: Área = {CalcularArea()}, Perímetro = {CalcularPerimetro()}");
         }
     }
 }

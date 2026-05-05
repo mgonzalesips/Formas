@@ -4,13 +4,12 @@
     {
         static void Main(string[] args)
         {
-            List<Cuadrado> formas = new List<Cuadrado>();
+            List<Figura> formas = new List<Figura>();
             formas.Add(new Rectangulo(7, 3));
             formas.Add(new Cuadrado(4));
+            formas.Add(new Rectangulo(6, 4));
 
-            Cuadrado c = new Cuadrado(5);
-            c.Lado = 6;
-            foreach (Cuadrado forma in formas)
+            foreach (Figura forma in formas)
             {
                 forma.MostrarInformacion();
             }
